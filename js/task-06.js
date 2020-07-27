@@ -7,8 +7,8 @@ const products = [
 
 const calculateTotalPrice = function (allProducts, productName) {
   for (const item of allProducts) {
-    if (item[keys[0]] === productName) {
-      return item[keys[1]] * item[keys[2]];
+    if (item.name === productName) {
+      return item.price * item.quantity;
     }
   }
 };
