@@ -6,14 +6,11 @@ const products = [
 ];
 
 const calculateTotalPrice = function (allProducts, productName) {
-  let totalPrice = 0;
   for (const item of allProducts) {
-    const keys = Object.keys(item);
     if (item[keys[0]] === productName) {
-      totalPrice += item[keys[1]] * item[keys[2]];
+      return item[keys[1]] * item[keys[2]];
     }
   }
-  return totalPrice;
 };
 
 console.log(calculateTotalPrice(products, "Радар"));
